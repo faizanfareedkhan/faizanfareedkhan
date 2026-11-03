@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="220" viewBox="0 0 420 220" role="img" aria-label="GitHub: 1,257 contributions since Jul 2022, 776 in 2026, current streak 1 days, longest streak 12 days, 18 public repositories.">
+<title>GitHub: 1,257 contributions since Jul 2022, 776 in 2026, current streak 1 days, longest streak 12 days, 18 public repositories.</title>
+<defs>
+  <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0891b2"/><stop offset="50%" stop-color="#6366f1"/><stop offset="100%" stop-color="#9333ea"/></linearGradient>
+  <linearGradient id="vg" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#0891b2"/><stop offset="50%" stop-color="#6366f1"/><stop offset="100%" stop-color="#9333ea"/></linearGradient>
+</defs>
+<style>
+  text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif;fill:#1e293b;font-variant-numeric:tabular-nums}
+  .mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+  .title{font-size:14px;font-weight:600;fill:#0f172a}
+  .sub{font-size:12px;fill:#64748b}
+  .big{font-weight:700;fill:url(#hg);letter-spacing:-.02em}
+  .value{font-size:17px;font-weight:600;fill:#0f172a}
+  .label{font-size:11px;fill:#64748b}
+  .tiny{font-size:10px;fill:#64748b}
+  .strong{fill:#0f172a;font-weight:600}
+  .fade{opacity:0;animation:fade .7s ease-out forwards}
+  .grow{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:grow .9s cubic-bezier(.2,.8,.2,1) forwards}
+  .growx{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0);animation:growx .9s cubic-bezier(.2,.8,.2,1) forwards}
+  @keyframes fade{to{opacity:1}}
+  @keyframes grow{to{transform:scaleY(1)}}
+  @keyframes growx{to{transform:scaleX(1)}}
+  @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1}.grow,.growx{animation:none;transform:none}}
+</style>
+<rect x="0.5" y="0.5" width="419" height="219" rx="10" fill="#ffffff" stroke="url(#hg)" stroke-opacity="0.55"/>
+<text x="24" y="36" class="title">GitHub</text>
+<text x="396" y="36" class="sub" text-anchor="end">@faizanfareedkhan</text>
+<g class="fade">
+<text x="24" y="96" class="big" font-size="38">1,257</text>
+<text x="24" y="119" class="label">contributions since Jul 2022</text>
+</g>
+<rect class="grow" x="238.6" y="117" width="19.7" height="3" rx="3" fill="url(#vg)" fill-opacity="0.45"/>
+<text x="248.4" y="111" class="tiny" text-anchor="middle">1</text>
+<text x="248.4" y="136" class="tiny" text-anchor="middle">2022</text>
+<rect class="grow" style="animation-delay:90ms" x="271.4" y="119" width="19.7" height="1" rx="3" fill="url(#vg)" fill-opacity="0.45"/>
+<text x="281.2" y="113" class="tiny" text-anchor="middle">0</text>
+<text x="281.2" y="136" class="tiny" text-anchor="middle">2023</text>
+<rect class="grow" style="animation-delay:180ms" x="304.2" y="97" width="19.7" height="23" rx="3" fill="url(#vg)" fill-opacity="0.45"/>
+<text x="314" y="91" class="tiny" text-anchor="middle">318</text>
+<text x="314" y="136" class="tiny" text-anchor="middle">2024</text>
+<rect class="grow" style="animation-delay:270ms" x="337" y="108" width="19.7" height="12" rx="3" fill="url(#vg)" fill-opacity="0.45"/>
+<text x="346.8" y="102" class="tiny" text-anchor="middle">162</text>
+<text x="346.8" y="136" class="tiny" text-anchor="middle">2025</text>
+<rect class="grow" style="animation-delay:360ms" x="369.8" y="64" width="19.7" height="56" rx="3" fill="url(#vg)"/>
+<text x="379.6" y="58" class="tiny strong" text-anchor="middle">776</text>
+<text x="379.6" y="136" class="tiny strong" text-anchor="middle">2026</text>
+<line x1="24" y1="148.5" x2="396" y2="148.5" stroke="#f1f5f9"/>
+<g class="fade" style="animation-delay:300ms"><text x="24" y="180" class="value">776</text>
+<text x="24" y="198" class="label">in 2026</text></g>
+<g class="fade" style="animation-delay:380ms"><text x="120" y="180" class="value">1 day</text>
+<text x="120" y="198" class="label">current streak</text></g>
+<g class="fade" style="animation-delay:460ms"><text x="216" y="180" class="value">12 days</text>
+<text x="216" y="198" class="label">longest streak</text></g>
+<g class="fade" style="animation-delay:540ms"><text x="312" y="180" class="value">18</text>
+<text x="312" y="198" class="label">public repos</text></g>
+</svg>

@@ -1,0 +1,228 @@
+{
+  "updated": "2026-11-03",
+  "github": {
+    "login": "faizanfareedkhan",
+    "since": "2022-07-02",
+    "publicRepos": 18,
+    "allTime": {
+      "total": 1257,
+      "perYear": [
+        {
+          "year": 2022,
+          "total": 1
+        },
+        {
+          "year": 2023,
+          "total": 0
+        },
+        {
+          "year": 2024,
+          "total": 318
+        },
+        {
+          "year": 2025,
+          "total": 162
+        },
+        {
+          "year": 2026,
+          "total": 776
+        }
+      ],
+      "longestStreak": {
+        "length": 12,
+        "start": "2024-03-12",
+        "end": "2024-03-23"
+      },
+      "currentStreak": 1
+    },
+    "thisYear": {
+      "total": 776,
+      "commits": 25,
+      "pullRequests": 2,
+      "reviews": 0,
+      "issues": 0,
+      "restricted": 748,
+      "monthly": [
+        5,
+        102,
+        113,
+        112,
+        96,
+        45,
+        59,
+        73,
+        90,
+        75,
+        6,
+        null
+      ],
+      "weekdays": [
+        131,
+        167,
+        123,
+        149,
+        99,
+        43,
+        64
+      ],
+      "topWeekday": "Tuesday",
+      "activeDays": 177,
+      "elapsedDays": 307,
+      "busiestDay": {
+        "date": "2026-03-17",
+        "count": 19
+      },
+      "bestMonth": {
+        "name": "Mar",
+        "count": 113
+      },
+      "last30Days": 60,
+      "averages": {
+        "perDay": 2.527687296416938,
+        "perWeek": 17.693811074918568,
+        "perMonth": 76.9349022801303,
+        "perActiveDay": 4.3841807909604515
+      }
+    }
+  },
+  "leetcode": {
+    "username": "yosoylilnib",
+    "ranking": 5000001,
+    "solved": {
+      "all": 11,
+      "easy": 9,
+      "medium": 2,
+      "hard": 0
+    },
+    "totals": {
+      "all": 4100,
+      "easy": 975,
+      "medium": 2138,
+      "hard": 987
+    },
+    "acceptance": 57.89473684210527,
+    "maxStreak": 2,
+    "activeDays": 6,
+    "languages": [
+      "C++",
+      "JavaScript",
+      "Python"
+    ],
+    "recent": [
+      {
+        "title": "Contains Duplicate",
+        "slug": "contains-duplicate",
+        "lang": "C++",
+        "date": "2026-11-02",
+        "solutionUrl": "https://github.com/faizanfareedkhan/leet_code/tree/main/0217-contains-duplicate"
+      },
+      {
+        "title": "Subsets II",
+        "slug": "subsets-ii",
+        "lang": "C++",
+        "date": "2026-10-24",
+        "solutionUrl": "https://github.com/faizanfareedkhan/leet_code/tree/main/0090-subsets-ii"
+      },
+      {
+        "title": "Fibonacci Number",
+        "slug": "fibonacci-number",
+        "lang": "C++",
+        "date": "2026-10-20",
+        "solutionUrl": "https://github.com/faizanfareedkhan/leet_code/tree/main/0509-fibonacci-number"
+      },
+      {
+        "title": "Binary Search",
+        "slug": "binary-search",
+        "lang": "C++",
+        "date": "2026-10-20",
+        "solutionUrl": "https://github.com/faizanfareedkhan/leet_code/tree/main/0704-binary-search"
+      },
+      {
+        "title": "Subsets",
+        "slug": "subsets",
+        "lang": "C++",
+        "date": "2026-10-20",
+        "solutionUrl": "https://github.com/faizanfareedkhan/leet_code/tree/main/0078-subsets"
+      }
+    ],
+    "stale": false
+  },
+  "leetcodeRaw": {
+    "username": "yosoylilnib",
+    "ranking": 5000001,
+    "solved": {
+      "all": 11,
+      "easy": 9,
+      "medium": 2,
+      "hard": 0
+    },
+    "totals": {
+      "all": 4100,
+      "easy": 975,
+      "medium": 2138,
+      "hard": 987
+    },
+    "acceptedSubmissions": 44,
+    "totalSubmissions": 76,
+    "maxStreak": 2,
+    "activeDays": 6,
+    "languages": [
+      {
+        "name": "C++",
+        "solved": 5
+      },
+      {
+        "name": "JavaScript",
+        "solved": 5
+      },
+      {
+        "name": "Python",
+        "solved": 2
+      }
+    ],
+    "recent": [
+      {
+        "title": "Contains Duplicate",
+        "slug": "contains-duplicate",
+        "timestamp": 1793644084,
+        "lang": "cpp"
+      },
+      {
+        "title": "Subsets II",
+        "slug": "subsets-ii",
+        "timestamp": 1792842528,
+        "lang": "cpp"
+      },
+      {
+        "title": "Fibonacci Number",
+        "slug": "fibonacci-number",
+        "timestamp": 1792499552,
+        "lang": "cpp"
+      },
+      {
+        "title": "Binary Search",
+        "slug": "binary-search",
+        "timestamp": 1792499541,
+        "lang": "cpp"
+      },
+      {
+        "title": "Subsets",
+        "slug": "subsets",
+        "timestamp": 1792499355,
+        "lang": "cpp"
+      },
+      {
+        "title": "Fibonacci Number",
+        "slug": "fibonacci-number",
+        "timestamp": 1787035168,
+        "lang": "cpp"
+      },
+      {
+        "title": "Binary Search",
+        "slug": "binary-search",
+        "timestamp": 1787034118,
+        "lang": "cpp"
+      }
+    ]
+  }
+}

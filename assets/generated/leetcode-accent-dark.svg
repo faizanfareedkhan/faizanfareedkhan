@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="220" viewBox="0 0 420 220" role="img" aria-label="LeetCode: 11 of 4100 problems solved (Easy 9, Medium 2, Hard 0).">
+<title>LeetCode: 11 of 4100 problems solved (Easy 9, Medium 2, Hard 0).</title>
+<defs>
+  <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#818cf8"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
+  <linearGradient id="vg" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#818cf8"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
+</defs>
+<style>
+  text{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif;fill:#e2e8f0;font-variant-numeric:tabular-nums}
+  .mono{font-family:ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace}
+  .title{font-size:14px;font-weight:600;fill:#f8fafc}
+  .sub{font-size:12px;fill:#94a3b8}
+  .big{font-weight:700;fill:url(#hg);letter-spacing:-.02em}
+  .value{font-size:17px;font-weight:600;fill:#f8fafc}
+  .label{font-size:11px;fill:#94a3b8}
+  .tiny{font-size:10px;fill:#94a3b8}
+  .strong{fill:#f8fafc;font-weight:600}
+  .fade{opacity:0;animation:fade .7s ease-out forwards}
+  .grow{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:grow .9s cubic-bezier(.2,.8,.2,1) forwards}
+  .growx{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0);animation:growx .9s cubic-bezier(.2,.8,.2,1) forwards}
+  @keyframes fade{to{opacity:1}}
+  @keyframes grow{to{transform:scaleY(1)}}
+  @keyframes growx{to{transform:scaleX(1)}}
+  @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1}.grow,.growx{animation:none;transform:none}}
+</style>
+<rect x="0.5" y="0.5" width="419" height="219" rx="10" fill="#0b1020" stroke="url(#hg)" stroke-opacity="0.55"/>
+<text x="24" y="36" class="title">LeetCode</text>
+<text x="396" y="36" class="sub" text-anchor="end">@yosoylilnib</text>
+<circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#1e293b" stroke-dasharray="77.1 262.2" stroke-dashoffset="-2.5"/><g class="fade"><circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#2dd4bf" stroke-linecap="round" stroke-dasharray="0.01 339.3" stroke-dashoffset="-6.5"/></g>
+<circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#1e293b" stroke-dasharray="169.1 170.2" stroke-dashoffset="-84.6"/><g class="fade"><circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#fbbf24" stroke-linecap="round" stroke-dasharray="0.01 339.3" stroke-dashoffset="-88.6"/></g>
+<circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#1e293b" stroke-dasharray="78.1 261.2" stroke-dashoffset="-258.7"/>
+<g class="fade">
+<text x="92" y="103" class="label" text-anchor="middle">solved</text>
+<text x="92" y="131" class="big" font-size="28" text-anchor="middle">11</text>
+<text x="92" y="149" class="tiny" text-anchor="middle">of 4,100</text>
+</g>
+<text x="180" y="80" font-size="12.5" font-weight="600" style="fill:#2dd4bf">Easy</text>
+<text x="396" y="80" class="label mono" text-anchor="end"><tspan class="strong">9</tspan> / 975</text>
+<rect x="180" y="89" width="216" height="6" rx="3" fill="#1e293b"/>
+<rect class="growx" style="animation-delay:200ms" x="180" y="89" width="6" height="6" rx="3" fill="#2dd4bf"/>
+<text x="180" y="120" font-size="12.5" font-weight="600" style="fill:#fbbf24">Medium</text>
+<text x="396" y="120" class="label mono" text-anchor="end"><tspan class="strong">2</tspan> / 2,138</text>
+<rect x="180" y="129" width="216" height="6" rx="3" fill="#1e293b"/>
+<rect class="growx" style="animation-delay:320ms" x="180" y="129" width="6" height="6" rx="3" fill="#fbbf24"/>
+<text x="180" y="160" font-size="12.5" font-weight="600" style="fill:#fb7185">Hard</text>
+<text x="396" y="160" class="label mono" text-anchor="end"><tspan class="strong">0</tspan> / 987</text>
+<rect x="180" y="169" width="216" height="6" rx="3" fill="#1e293b"/>
+
+<text x="24" y="204" class="label">C++, JavaScript, Python  ·  6 active days  ·  58% acceptance</text>
+</svg>
