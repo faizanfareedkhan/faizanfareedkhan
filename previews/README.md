@@ -10,5 +10,5 @@ The same live data rendered three ways. Open each one and look at it in both lig
 | **Dark + accent gradient** | [Open](accent.md) | Waving gradient banner, typing intro, animated gradient cards, Skill Icons. |
 | **Maximal / animated** | [Open](maximal.md) | Everything: brand-colour badges, view counter, LeetCode heatmap card, contribution snake. |
 
-The profile currently uses **Monochrome minimal**. To switch, change `"style"` in
+The profile currently uses **Dark + accent gradient**. To switch, change `"style"` in
 [`profile.config.json`](../profile.config.json) to `mono`, `accent` or `maximal` and push. The workflow rebuilds `README.md`.
