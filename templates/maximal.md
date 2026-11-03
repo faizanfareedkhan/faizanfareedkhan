@@ -17,7 +17,7 @@
 - 🤖 I wire AI agents into real workflows: chat, outreach, documents and deal rooms
 - 🎓 Final year at Virtual University of Pakistan, building a disease surveillance platform
 - 🧠 Practising data structures and algorithms in C++ on LeetCode
-- 📫 Reach me on [LinkedIn](https://www.linkedin.com/in/faizan-fareed-khan-684208243/) or at [yosoylilnib@gmail.com](mailto:yosoylilnib@gmail.com)
+- 📫 Reach me on [LinkedIn](https://www.linkedin.com/in/faizan-fareed-khan-684208243/) or at [{{EMAIL}}](mailto:{{EMAIL}})
 
 ## 🚀 Featured work
 

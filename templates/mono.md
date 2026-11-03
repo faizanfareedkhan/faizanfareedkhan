@@ -4,7 +4,7 @@
 
 I build web products end to end: React and Next.js on the front, Bun, Node.js, Elysia and NestJS behind them, PostgreSQL, Supabase and Redis underneath, and AI agents wired into real workflows. Over three years of shipping products for real users. Right now I'm a full-stack engineer on [SellAnyBiz.AI](https://sellanybiz.ai), an AI-powered marketplace for buying and selling businesses.
 
-[LinkedIn](https://www.linkedin.com/in/faizan-fareed-khan-684208243/) · [Email](mailto:yosoylilnib@gmail.com) · [LeetCode](https://leetcode.com/u/{{LEETCODE}}/)
+[LinkedIn](https://www.linkedin.com/in/faizan-fareed-khan-684208243/) · [Email](mailto:{{EMAIL}}) · [LeetCode](https://leetcode.com/u/{{LEETCODE}}/)
 
 ---
 

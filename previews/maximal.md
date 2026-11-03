@@ -9,7 +9,7 @@
 <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&duration=2600&pause=700&color=22D3EE&center=true&vCenter=true&multiline=false&width=640&lines=%F0%9F%9A%80+Shipping+SellAnyBiz.AI;%F0%9F%A4%96+Wiring+AI+agents+into+real+products;%E2%9A%A1+Next.js+%C2%B7+Bun+%C2%B7+Elysia+%C2%B7+Supabase;%F0%9F%A7%A9+Solving+LeetCode+in+C%2B%2B;%F0%9F%A4%9D+Open+to+new+opportunities" alt="Typing intro">
 
 <a href="https://www.linkedin.com/in/faizan-fareed-khan-684208243/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI%2BPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTIwLjQ0NyAyMC40NTJoLTMuNTU0di01LjU2OWMwLTEuMzI4LS4wMjctMy4wMzctMS44NTItMy4wMzctMS44NTMgMC0yLjEzNiAxLjQ0NS0yLjEzNiAyLjkzOXY1LjY2N0g5LjM1MVY5aDMuNDE0djEuNTYxaC4wNDZjLjQ3Ny0uOSAxLjYzNy0xLjg1IDMuMzctMS44NSAzLjYwMSAwIDQuMjY3IDIuMzcgNC4yNjcgNS40NTV2Ni4yODZ6TTUuMzM3IDcuNDMzYTIuMDYyIDIuMDYyIDAgMSAxIDAtNC4xMjUgMi4wNjIgMi4wNjIgMCAwIDEgMCA0LjEyNXpNNy4xMTkgMjAuNDUySDMuNTU1VjloMy41NjR2MTEuNDUyek0yMi4yMjUgMEgxLjc3MUMuNzkyIDAgMCAuNzc0IDAgMS43Mjl2MjAuNTQyQzAgMjMuMjI3Ljc5MiAyNCAxLjc3MSAyNGgyMC40NTFDMjMuMiAyNCAyNCAyMy4yMjcgMjQgMjIuMjcxVjEuNzI5QzI0IC43NzQgMjMuMiAwIDIyLjIyMiAwaC4wMDN6Ii8%2BPC9zdmc%2B&logoColor=white" alt="LinkedIn"></a>&nbsp;
-<a href="mailto:yosoylilnib@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>&nbsp;
+<a href="mailto:faizanfareedkhan.dev@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email"></a>&nbsp;
 <a href="https://leetcode.com/u/yosoylilnib/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=000000" alt="LeetCode"></a>&nbsp;
 <img src="https://img.shields.io/badge/Lahore%2C%20Pakistan-34A853?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Lahore, Pakistan">
 
@@ -24,7 +24,7 @@
 - 🤖 I wire AI agents into real workflows: chat, outreach, documents and deal rooms
 - 🎓 Final year at Virtual University of Pakistan, building a disease surveillance platform
 - 🧠 Practising data structures and algorithms in C++ on LeetCode
-- 📫 Reach me on [LinkedIn](https://www.linkedin.com/in/faizan-fareed-khan-684208243/) or at [yosoylilnib@gmail.com](mailto:yosoylilnib@gmail.com)
+- 📫 Reach me on [LinkedIn](https://www.linkedin.com/in/faizan-fareed-khan-684208243/) or at [faizanfareedkhan.dev@gmail.com](mailto:faizanfareedkhan.dev@gmail.com)
 
 ## 🚀 Featured work
 
@@ -122,7 +122,7 @@ Hospitals and labs share case records; ML forecasts malaria and typhoid trends, 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/overview-accent-dark.svg">
-    <img alt="GitHub: 1,261 contributions since 2022, 780 in 2026" src="../assets/generated/overview-accent-light.svg" width="49%">
+    <img alt="GitHub: 1,262 contributions since 2022, 781 in 2026" src="../assets/generated/overview-accent-light.svg" width="49%">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/leetcode-accent-dark.svg">
@@ -132,7 +132,7 @@ Hospitals and labs share case records; ML forecasts malaria and typhoid trends, 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/activity-accent-dark.svg">
-    <img alt="2026 activity: 780 contributions, 2.5 per day on average" src="../assets/generated/activity-accent-light.svg" width="99%">
+    <img alt="2026 activity: 781 contributions, 2.5 per day on average" src="../assets/generated/activity-accent-light.svg" width="99%">
   </picture>
 </p>
 <p align="center">
@@ -188,6 +188,6 @@ Hospitals and labs share case records; ML forecasts malaria and typhoid trends, 
 
 </details>
 
-<p align="center"><sub>⚡ Stats refresh automatically every 6 hours via GitHub Actions · updated 3 Nov 2026</sub></p>
+<p align="center"><sub>⚡ Stats refresh automatically every 6 hours via GitHub Actions · updated 4 Nov 2026</sub></p>
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:22d3ee,50:818cf8,100:c084fc&height=110&section=footer" width="100%" alt="">

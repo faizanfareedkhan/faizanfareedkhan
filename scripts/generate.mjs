@@ -122,6 +122,7 @@ async function main() {
   const shared = {
     GITHUB: config.github,
     LEETCODE: config.leetcode,
+    EMAIL: config.contact.email,
     UPDATED: formatDate(today),
     YEAR: String(githubStats.year),
     TECH_MONO: techMono(config.techStack),

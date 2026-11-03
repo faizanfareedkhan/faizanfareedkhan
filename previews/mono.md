@@ -8,7 +8,7 @@
 
 I build web products end to end: React and Next.js on the front, Bun, Node.js, Elysia and NestJS behind them, PostgreSQL, Supabase and Redis underneath, and AI agents wired into real workflows. Over three years of shipping products for real users. Right now I'm a full-stack engineer on [SellAnyBiz.AI](https://sellanybiz.ai), an AI-powered marketplace for buying and selling businesses.
 
-[LinkedIn](https://www.linkedin.com/in/faizan-fareed-khan-684208243/) · [Email](mailto:yosoylilnib@gmail.com) · [LeetCode](https://leetcode.com/u/yosoylilnib/)
+[LinkedIn](https://www.linkedin.com/in/faizan-fareed-khan-684208243/) · [Email](mailto:faizanfareedkhan.dev@gmail.com) · [LeetCode](https://leetcode.com/u/yosoylilnib/)
 
 ---
 
@@ -72,7 +72,7 @@ My final year project at Virtual University of Pakistan. Hospitals and labs shar
 <p>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/overview-mono-dark.svg">
-    <img alt="GitHub: 1,261 contributions since 2022, 780 in 2026" src="../assets/generated/overview-mono-light.svg" width="49%">
+    <img alt="GitHub: 1,262 contributions since 2022, 781 in 2026" src="../assets/generated/overview-mono-light.svg" width="49%">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/leetcode-mono-dark.svg">
@@ -81,10 +81,10 @@ My final year project at Virtual University of Pakistan. Hospitals and labs shar
 </p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/activity-mono-dark.svg">
-  <img alt="2026 activity: 780 contributions, 2.5 per day on average" src="../assets/generated/activity-mono-light.svg" width="100%">
+  <img alt="2026 activity: 781 contributions, 2.5 per day on average" src="../assets/generated/activity-mono-light.svg" width="100%">
 </picture>
 
-<sub>Built by this repository's GitHub Action from the GitHub and LeetCode APIs, refreshed every 6 hours. Contribution counts include private work. Last updated 3 Nov 2026.</sub>
+<sub>Built by this repository's GitHub Action from the GitHub and LeetCode APIs, refreshed every 6 hours. Contribution counts include private work. Last updated 4 Nov 2026.</sub>
 
 ### Recently solved on LeetCode
 
