@@ -105,8 +105,8 @@ Hospitals and labs share case records; ML forecasts malaria and typhoid trends, 
 </p>
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://leetcard.jacoblin.cool/{{LEETCODE}}?theme=dark&font=Inter&ext=heatmap">
-    <img alt="LeetCode card with submission heatmap" src="https://leetcard.jacoblin.cool/{{LEETCODE}}?theme=light&font=Inter&ext=heatmap" width="60%">
+    <source media="(prefers-color-scheme: dark)" srcset="https://leetcard.jacoblin.cool/{{LEETCODE}}?theme=dark&font=Inter&ext=heatmap&hide=ranking">
+    <img alt="LeetCode card with submission heatmap" src="https://leetcard.jacoblin.cool/{{LEETCODE}}?theme=light&font=Inter&ext=heatmap&hide=ranking" width="60%">
   </picture>
 </p>
 

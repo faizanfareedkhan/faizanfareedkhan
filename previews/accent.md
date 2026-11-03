@@ -107,7 +107,7 @@ Hospitals and labs share case records; the platform forecasts malaria and typhoi
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/overview-accent-dark.svg">
-    <img alt="GitHub: 1,260 contributions since 2022, 779 in 2026" src="../assets/generated/overview-accent-light.svg" width="49%">
+    <img alt="GitHub: 1,261 contributions since 2022, 780 in 2026" src="../assets/generated/overview-accent-light.svg" width="49%">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/leetcode-accent-dark.svg">
@@ -117,7 +117,7 @@ Hospitals and labs share case records; the platform forecasts malaria and typhoi
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/activity-accent-dark.svg">
-    <img alt="2026 activity: 779 contributions, 2.5 per day on average" src="../assets/generated/activity-accent-light.svg" width="99%">
+    <img alt="2026 activity: 780 contributions, 2.5 per day on average" src="../assets/generated/activity-accent-light.svg" width="99%">
   </picture>
 </p>
 
