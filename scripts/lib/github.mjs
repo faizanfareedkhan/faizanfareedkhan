@@ -126,6 +126,20 @@ export async function fetchGitHub({ login, token, now = new Date() }) {
   };
 }
 
+/** True when a file exists on a branch (used to show the snake only once it has been drawn). */
+export async function fileExists({ owner, repo, path, ref, token }) {
+  try {
+    await fetchJson(
+      `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${encodeURIComponent(ref)}`,
+      { headers: headers(token) },
+      { label: `GitHub contents ${owner}/${repo}/${path}@${ref}`, retries: 2 },
+    );
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /** Top-level folders of a public repository (used to link LeetHub solution folders). */
 export async function fetchRepoDirectories({ owner, repo, token }) {
   const items = await fetchJson(

@@ -72,7 +72,7 @@ My final year project at Virtual University of Pakistan. Hospitals and labs shar
 <p>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/overview-mono-dark.svg">
-    <img alt="GitHub: 1,259 contributions since 2022, 778 in 2026" src="../assets/generated/overview-mono-light.svg" width="49%">
+    <img alt="GitHub: 1,260 contributions since 2022, 779 in 2026" src="../assets/generated/overview-mono-light.svg" width="49%">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/leetcode-mono-dark.svg">
@@ -81,7 +81,7 @@ My final year project at Virtual University of Pakistan. Hospitals and labs shar
 </p>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/activity-mono-dark.svg">
-  <img alt="2026 activity: 778 contributions, 2.5 per day on average" src="../assets/generated/activity-mono-light.svg" width="100%">
+  <img alt="2026 activity: 779 contributions, 2.5 per day on average" src="../assets/generated/activity-mono-light.svg" width="100%">
 </picture>
 
 <sub>Built by this repository's GitHub Action from the GitHub and LeetCode APIs, refreshed every 6 hours. Contribution counts include private work. Last updated 3 Nov 2026.</sub>

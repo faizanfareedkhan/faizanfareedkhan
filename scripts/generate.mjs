@@ -15,7 +15,7 @@ import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { fetchGitHub, fetchRepoDirectories } from './lib/github.mjs';
+import { fetchGitHub, fetchRepoDirectories, fileExists } from './lib/github.mjs';
 import { fetchLeetCode } from './lib/leetcode.mjs';
 import {
   contactBadges, leetcodeRecent, renderTemplate, reposSection, techAccent, techMaximal, techMono,
@@ -79,6 +79,14 @@ async function main() {
   }
   const leetcodeStats = leetcodeRaw ? computeLeetCodeStats(leetcodeRaw, solutionDirs, config.timezone) : null;
 
+  // The snake is drawn by the workflow onto the "output" branch. Until it exists, leave the section out
+  // instead of showing a broken image.
+  const snakeBase = `https://raw.githubusercontent.com/${config.github}/${config.github}/output`;
+  const snakeReady = await fileExists({
+    owner: config.github, repo: config.github, path: 'snake-dark.svg', ref: 'output', token,
+  });
+  log(`contribution snake ${snakeReady ? 'found' : 'not drawn yet, section hidden'}`);
+
   // Cards: every theme used by any style, in dark and light.
   const themes = [...new Set(Object.values(config.styles).map((style) => style.theme))];
   let changedCards = 0;
@@ -123,6 +131,20 @@ async function main() {
     CONTACT_MAXIMAL: contactBadges(config.contact, 'maximal'),
     REPOS: reposSection(github.repos, config.repos),
     LEETCODE_RECENT: leetcodeRecent(leetcodeStats),
+    SNAKE: snakeReady
+      ? [
+        '## 🐍 Contribution snake',
+        '',
+        '<p align="center">',
+        '  <picture>',
+        `    <source media="(prefers-color-scheme: dark)" srcset="${snakeBase}/snake-dark.svg">`,
+        `    <img alt="Snake eating my contribution graph" src="${snakeBase}/snake-light.svg">`,
+        '  </picture>',
+        '</p>',
+        '',
+        '',
+      ].join('\n')
+      : '',
     ALT_OVERVIEW: `GitHub: ${githubStats.allTime.total.toLocaleString('en-US')} contributions since ${githubStats.since.slice(0, 4)}, ${githubStats.thisYear.total.toLocaleString('en-US')} in ${githubStats.year}`,
     ALT_LEETCODE: leetcodeStats
       ? `LeetCode: ${leetcodeStats.solved.all} problems solved (Easy ${leetcodeStats.solved.easy}, Medium ${leetcodeStats.solved.medium}, Hard ${leetcodeStats.solved.hard})`

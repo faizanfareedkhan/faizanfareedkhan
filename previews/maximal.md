@@ -122,7 +122,7 @@ Hospitals and labs share case records; ML forecasts malaria and typhoid trends, 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/overview-accent-dark.svg">
-    <img alt="GitHub: 1,259 contributions since 2022, 778 in 2026" src="../assets/generated/overview-accent-light.svg" width="49%">
+    <img alt="GitHub: 1,260 contributions since 2022, 779 in 2026" src="../assets/generated/overview-accent-light.svg" width="49%">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/leetcode-accent-dark.svg">
@@ -132,22 +132,13 @@ Hospitals and labs share case records; ML forecasts malaria and typhoid trends, 
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="../assets/generated/activity-accent-dark.svg">
-    <img alt="2026 activity: 778 contributions, 2.5 per day on average" src="../assets/generated/activity-accent-light.svg" width="99%">
+    <img alt="2026 activity: 779 contributions, 2.5 per day on average" src="../assets/generated/activity-accent-light.svg" width="99%">
   </picture>
 </p>
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://leetcard.jacoblin.cool/yosoylilnib?theme=dark&font=Inter&ext=heatmap">
     <img alt="LeetCode card with submission heatmap" src="https://leetcard.jacoblin.cool/yosoylilnib?theme=light&font=Inter&ext=heatmap" width="60%">
-  </picture>
-</p>
-
-## 🐍 Contribution snake
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/faizanfareedkhan/faizanfareedkhan/output/snake-dark.svg">
-    <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/faizanfareedkhan/faizanfareedkhan/output/snake-light.svg">
   </picture>
 </p>
 

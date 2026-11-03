@@ -110,16 +110,7 @@ Hospitals and labs share case records; ML forecasts malaria and typhoid trends, 
   </picture>
 </p>
 
-## 🐍 Contribution snake
-
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/{{GITHUB}}/{{GITHUB}}/output/snake-dark.svg">
-    <img alt="Snake eating my contribution graph" src="https://raw.githubusercontent.com/{{GITHUB}}/{{GITHUB}}/output/snake-light.svg">
-  </picture>
-</p>
-
-## 🧩 Recently solved on LeetCode
+{{SNAKE}}## 🧩 Recently solved on LeetCode
 
 {{LEETCODE_RECENT}}
 
