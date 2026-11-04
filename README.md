@@ -41,7 +41,7 @@ Full Stack Developer with 3+ years of experience building production web applica
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/overview-dark.svg">
-    <img alt="GitHub: 1,263 contributions since 2022, 782 in 2026" src="assets/generated/overview-light.svg" width="49%">
+    <img alt="GitHub: 1,264 contributions since 2022, 783 in 2026" src="assets/generated/overview-light.svg" width="49%">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/leetcode-dark.svg">
@@ -51,7 +51,7 @@ Full Stack Developer with 3+ years of experience building production web applica
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/activity-dark.svg">
-    <img alt="2026 activity: 782 contributions, 2.5 per day on average" src="assets/generated/activity-light.svg" width="99%">
+    <img alt="2026 activity: 783 contributions, 2.5 per day on average" src="assets/generated/activity-light.svg" width="99%">
   </picture>
 </p>
 <p align="center">
