@@ -4,28 +4,31 @@
  *
  *   GITHUB_TOKEN=… node scripts/generate.mjs
  *
- * 1. Fetches GitHub (profile, public repos, contribution calendar per year) and LeetCode data.
- * 2. Renders SVG cards for every theme in dark and light mode into assets/generated/.
- * 3. Renders README.md from the template of the selected style, plus one preview per style in previews/.
+ * 1. Fetches GitHub (profile, contribution calendar per year) and LeetCode data.
+ * 2. Renders the static SVG cards in dark and light mode into assets/generated/.
+ * 3. Renders README.md from templates/profile.md.
  *
  * If LeetCode cannot be reached, the last good LeetCode data in assets/data.json is reused,
  * so a temporary outage never blanks the card.
  */
+import { existsSync } from 'node:fs';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { fetchGitHub, fetchRepoDirectories, fileExists } from './lib/github.mjs';
+import { fetchGitHub, fetchRepoDirectories } from './lib/github.mjs';
 import { fetchLeetCode } from './lib/leetcode.mjs';
-import {
-  contactBadges, leetcodeRecent, renderTemplate, reposSection, techAccent, techMaximal, techMono,
-} from './lib/markdown.mjs';
+import { contactBadges, leetcodeRecent, renderTemplate, techTable } from './lib/markdown.mjs';
 import { computeGitHubStats, computeLeetCodeStats, dateIn, formatDate } from './lib/stats.mjs';
 import { renderActivityCard, renderLeetCodeCard, renderOverviewCard } from './lib/svg.mjs';
+
+const TEMPLATE = 'templates/profile.md';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const at = (...parts) => path.join(root, ...parts);
 const log = (message) => console.log(`[profile] ${message}`);
+// Shows up as a warning on the workflow run, so a silently frozen section gets noticed.
+const warn = (message) => console.warn(`::warning::[profile] ${message}`);
 
 async function readJson(file) {
   try {
@@ -62,7 +65,7 @@ async function main() {
     log(`fetching LeetCode data for ${config.leetcode}`);
     leetcodeRaw = await fetchLeetCode({ username: config.leetcode });
   } catch (error) {
-    console.warn(`[profile] LeetCode unavailable: ${error.message}`);
+    warn(`LeetCode unavailable, Recently solved is not fresh: ${error.message}`);
     if (previous?.leetcodeRaw) {
       log('reusing the last good LeetCode data');
       leetcodeRaw = { ...previous.leetcodeRaw, stale: true };
@@ -74,32 +77,20 @@ async function main() {
     try {
       solutionDirs = await fetchRepoDirectories({ owner: config.github, repo: config.leetcodeSolutionsRepo, token });
     } catch (error) {
-      console.warn(`[profile] could not list ${config.leetcodeSolutionsRepo}: ${error.message}`);
+      warn(`could not list ${config.leetcodeSolutionsRepo}: ${error.message}`);
     }
   }
   const leetcodeStats = leetcodeRaw ? computeLeetCodeStats(leetcodeRaw, solutionDirs, config.timezone) : null;
 
-  // The snake is drawn by the workflow onto the "output" branch. Until it exists, leave the section out
-  // instead of showing a broken image.
-  const snakeBase = `https://raw.githubusercontent.com/${config.github}/${config.github}/output`;
-  const snakeReady = await fileExists({
-    owner: config.github, repo: config.github, path: 'snake-dark.svg', ref: 'output', token,
-  });
-  log(`contribution snake ${snakeReady ? 'found' : 'not drawn yet, section hidden'}`);
-
-  // Cards: every theme used by any style, in dark and light.
-  const themes = [...new Set(Object.values(config.styles).map((style) => style.theme))];
   let changedCards = 0;
-  for (const theme of themes) {
-    for (const mode of ['dark', 'light']) {
-      const cards = {
-        overview: renderOverviewCard(githubStats, theme, mode),
-        leetcode: renderLeetCodeCard(leetcodeStats, theme, mode),
-        activity: renderActivityCard(githubStats, theme, mode),
-      };
-      for (const [name, svg] of Object.entries(cards)) {
-        if (await writeIfChanged(at('assets', 'generated', `${name}-${theme}-${mode}.svg`), svg)) changedCards += 1;
-      }
+  for (const mode of ['dark', 'light']) {
+    const cards = {
+      overview: renderOverviewCard(githubStats, mode),
+      leetcode: renderLeetCodeCard(leetcodeStats, mode),
+      activity: renderActivityCard(githubStats, mode),
+    };
+    for (const [name, svg] of Object.entries(cards)) {
+      if (await writeIfChanged(at('assets', 'generated', `${name}-${mode}.svg`), svg)) changedCards += 1;
     }
   }
   log(`${changedCards} card(s) changed`);
@@ -118,93 +109,35 @@ async function main() {
   };
   await writeIfChanged(at('assets', 'data.json'), `${JSON.stringify(snapshot, null, 2)}\n`);
 
-  // Markdown: README.md from the selected style, and one preview per style.
-  const shared = {
-    GITHUB: config.github,
-    LEETCODE: config.leetcode,
-    EMAIL: config.contact.email,
-    UPDATED: formatDate(today),
-    YEAR: String(githubStats.year),
-    TECH_MONO: techMono(config.techStack),
-    TECH_ACCENT: techAccent(config.techStack),
-    TECH_MAXIMAL: techMaximal(config.techStack),
-    CONTACT_ACCENT: contactBadges(config.contact, 'accent'),
-    CONTACT_MAXIMAL: contactBadges(config.contact, 'maximal'),
-    REPOS: reposSection(github.repos, config.repos),
-    LEETCODE_RECENT: leetcodeRecent(leetcodeStats),
-    SNAKE: snakeReady
-      ? [
-        '## 🐍 Contribution snake',
-        '',
-        '<p align="center">',
-        '  <picture>',
-        `    <source media="(prefers-color-scheme: dark)" srcset="${snakeBase}/snake-dark.svg">`,
-        `    <img alt="Snake eating my contribution graph" src="${snakeBase}/snake-light.svg">`,
-        '  </picture>',
-        '</p>',
-        '',
-        '',
-      ].join('\n')
-      : '',
-    ALT_OVERVIEW: `GitHub: ${githubStats.allTime.total.toLocaleString('en-US')} contributions since ${githubStats.since.slice(0, 4)}, ${githubStats.thisYear.total.toLocaleString('en-US')} in ${githubStats.year}`,
-    ALT_LEETCODE: leetcodeStats
-      ? `LeetCode: ${leetcodeStats.solved.all} problems solved (Easy ${leetcodeStats.solved.easy}, Medium ${leetcodeStats.solved.medium}, Hard ${leetcodeStats.solved.hard})`
-      : 'LeetCode stats',
-    ALT_ACTIVITY: `${githubStats.year} activity: ${githubStats.thisYear.total.toLocaleString('en-US')} contributions, ${githubStats.thisYear.averages.perDay.toFixed(1)} per day on average`,
-  };
+  // Link the resume only once the PDF is in the repository, so the button can never 404.
+  const { resume } = config.contact;
+  const resumeUrl = resume && existsSync(at(resume))
+    ? `https://github.com/${config.github}/${config.github}/blob/main/${resume}`
+    : null;
+  if (resume && !resumeUrl) warn(`${resume} is not in the repository, Resume button hidden`);
 
-  const styleNames = Object.keys(config.styles);
-  if (!config.styles[config.style]) throw new Error(`profile.config.json: unknown style "${config.style}"`);
-
-  for (const name of styleNames) {
-    const style = config.styles[name];
-    const template = await readFile(at(style.template), 'utf8');
-    const others = styleNames
-      .filter((other) => other !== name)
-      .map((other) => `[${config.styles[other].title}](${other}.md)`)
-      .join(' · ');
-    const preview = renderTemplate(
-      template,
-      {
-        ...shared,
-        ASSETS: '../assets/generated',
-        PREVIEW_NOTE: `> [!NOTE]\n> **Style preview: ${style.title}.** Other styles: ${others} · [all styles](README.md)\n\n`,
-      },
-      style.template,
-    );
-    await writeIfChanged(
-      at('previews', `${name}.md`),
-      `<!-- Generated by scripts/generate.mjs from ${style.template}. Do not edit by hand. -->\n${preview}`,
-    );
-
-    if (name === config.style) {
-      const readme = renderTemplate(template, { ...shared, ASSETS: 'assets/generated', PREVIEW_NOTE: '' }, style.template);
-      const changed = await writeIfChanged(
-        at('README.md'),
-        `<!-- Generated by scripts/generate.mjs from ${style.template}. Edit the template, not this file. -->\n${readme}`,
-      );
-      log(`README.md (${name}) ${changed ? 'updated' : 'unchanged'}`);
-    }
-  }
-
-  const index = [
-    '<!-- Generated by scripts/generate.mjs. Do not edit by hand. -->',
-    '# Profile README styles',
-    '',
-    'The same live data rendered three ways. Open each one and look at it in both light and dark mode',
-    '(GitHub → Settings → Appearance), then pick one.',
-    '',
-    '| Style | Preview | Highlights |',
-    '| :-- | :-- | :-- |',
-    `| **${config.styles.mono.title}** | [Open](mono.md) | Self-generated mono cards, plain links, black badges. Fast, quiet, recruiter-friendly. |`,
-    `| **${config.styles.accent.title}** | [Open](accent.md) | Waving gradient banner, typing intro, animated gradient cards, Skill Icons. |`,
-    `| **${config.styles.maximal.title}** | [Open](maximal.md) | Everything: brand-colour badges, view counter, LeetCode heatmap card, contribution snake. |`,
-    '',
-    `The profile currently uses **${config.styles[config.style].title}**. To switch, change \`"style"\` in`,
-    '[`profile.config.json`](../profile.config.json) to `mono`, `accent` or `maximal` and push. The workflow rebuilds `README.md`.',
-    '',
-  ].join('\n');
-  await writeIfChanged(at('previews', 'README.md'), index);
+  const readme = renderTemplate(
+    await readFile(at(TEMPLATE), 'utf8'),
+    {
+      LEETCODE: config.leetcode,
+      LOCATION: config.contact.location,
+      UPDATED: formatDate(today),
+      CONTACT: contactBadges(config.contact, resumeUrl),
+      TECH: techTable(config.techStack),
+      LEETCODE_RECENT: leetcodeRecent(leetcodeStats),
+      ALT_OVERVIEW: `GitHub: ${githubStats.allTime.total.toLocaleString('en-US')} contributions since ${githubStats.since.slice(0, 4)}, ${githubStats.thisYear.total.toLocaleString('en-US')} in ${githubStats.year}`,
+      ALT_LEETCODE: leetcodeStats
+        ? `LeetCode: ${leetcodeStats.solved.all} problems solved (Easy ${leetcodeStats.solved.easy}, Medium ${leetcodeStats.solved.medium}, Hard ${leetcodeStats.solved.hard})`
+        : 'LeetCode stats',
+      ALT_ACTIVITY: `${githubStats.year} activity: ${githubStats.thisYear.total.toLocaleString('en-US')} contributions, ${githubStats.thisYear.averages.perDay.toFixed(1)} per day on average`,
+    },
+    TEMPLATE,
+  );
+  const changed = await writeIfChanged(
+    at('README.md'),
+    `<!-- Generated by scripts/generate.mjs from ${TEMPLATE}. Edit the template, not this file. -->\n${readme}`,
+  );
+  log(`README.md ${changed ? 'updated' : 'unchanged'}`);
   log('done');
 }
 

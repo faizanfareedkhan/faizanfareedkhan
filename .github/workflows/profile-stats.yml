@@ -1,0 +1,56 @@
+name: Profile stats
+
+on:
+  schedule:
+    - cron: "23 * * * *" # every hour
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "templates/**"
+      - "resume/**"
+      - "profile.config.json"
+      - ".github/workflows/profile-stats.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: profile-stats
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    name: Build cards and README
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+
+      - name: Test
+        run: node --test "scripts/**/*.test.mjs"
+
+      - name: Generate
+        run: node scripts/generate.mjs
+        env:
+          # Optional: add a STATS_TOKEN secret (classic PAT with read:user) if the
+          # default token ever stops returning contribution data.
+          GITHUB_TOKEN: ${{ secrets.STATS_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then
+            echo "Nothing changed."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md assets
+          git commit -m "chore(stats): refresh profile stats"
+          git pull --rebase --autostash
+          git push

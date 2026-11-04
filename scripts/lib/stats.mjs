@@ -22,10 +22,6 @@ export function formatDate(iso) {
 }
 
 /** "2026-11-03T…" -> "Nov 2026" */
-export function formatMonthYear(iso) {
-  return `${MONTHS[Number(iso.slice(5, 7)) - 1]} ${iso.slice(0, 4)}`;
-}
-
 /** Longest run and the current run of days with at least one contribution. */
 export function computeStreaks(series) {
   let longest = { length: 0, start: null, end: null };

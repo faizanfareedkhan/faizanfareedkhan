@@ -1,193 +1,46 @@
 {
   "github": "faizanfareedkhan",
-  "leetcode": "yosoylilnib",
+  "leetcode": "faizanfareedkhan",
   "timezone": "Asia/Karachi",
   "contact": {
+    "resume": "resume/Faizan-Fareed-Khan-Resume.pdf",
+    "portfolio": "https://github.com/faizanfareedkhan/portfolio",
     "linkedin": "https://www.linkedin.com/in/faizan-fareed-khan-684208243/",
     "email": "faizanfareedkhan.dev@gmail.com",
-    "leetcode": "https://leetcode.com/u/yosoylilnib/",
+    "leetcode": "https://leetcode.com/u/faizanfareedkhan/",
     "location": "Lahore, Pakistan"
   },
-  "style": "maximal",
-  "styles": {
-    "mono": {
-      "title": "Monochrome minimal",
-      "template": "templates/mono.md",
-      "theme": "mono"
-    },
-    "accent": {
-      "title": "Dark + accent gradient",
-      "template": "templates/accent.md",
-      "theme": "accent"
-    },
-    "maximal": {
-      "title": "Maximal / animated",
-      "template": "templates/maximal.md",
-      "theme": "accent"
-    }
-  },
   "leetcodeSolutionsRepo": "leet_code",
-  "repos": {
-    "hidden": [
-      "faizanfareedkhan"
-    ],
-    "groups": [
-      {
-        "title": "Projects",
-        "repos": [
-          "socialMediaAutomation",
-          "bot_deployment",
-          "fyp-2",
-          "mern-e-commerce-project",
-          "backend-CAC",
-          "react_portfolio"
-        ]
-      },
-      {
-        "title": "Problem solving",
-        "repos": [
-          "leet_code",
-          "ds_a"
-        ]
-      },
-      {
-        "title": "Learning & practice",
-        "collapsed": true,
-        "repos": [
-          "portfolio",
-          "react",
-          "react-redux-toolkit-project",
-          "react-context-api-project-02",
-          "react-context-api-project",
-          "react-router-dom-project",
-          "react_int_jobs_project",
-          "five-react-basic-projects",
-          "demo-demo",
-          "localrepo"
-        ]
-      }
-    ],
-    "overrides": {
-      "socialMediaAutomation": {
-        "description": "Social media management for agencies: workspaces, team members, post scheduling and templates, with Google, Facebook and LinkedIn sign-in.",
-        "stack": "React · TypeScript · shadcn/ui · TanStack · Express · MongoDB",
-        "homepage": null
-      },
-      "bot_deployment": {
-        "description": "Puppeteer automation bot that publishes job ads in bulk across ZIP codes from an Excel sheet, with a React control panel.",
-        "stack": "Puppeteer · Express · React · Vite"
-      },
-      "fyp-2": {
-        "description": "MERN e-commerce store: catalogue, cart, orders, admin dashboard with charts, image uploads and PayPal checkout.",
-        "stack": "React · Redux Toolkit · Express · MongoDB · JWT"
-      },
-      "mern-e-commerce-project": {
-        "description": "E-commerce storefront UI built while learning the MERN stack.",
-        "stack": "React · React Router"
-      },
-      "backend-CAC": {
-        "description": "Two small Express.js API services.",
-        "stack": "Node.js · Express"
-      },
-      "react_portfolio": {
-        "description": "Earlier personal portfolio site with light/dark mode and scroll animations.",
-        "stack": "React · Tailwind CSS · DaisyUI"
-      },
-      "leet_code": {
-        "description": "My LeetCode solutions, synced automatically from LeetCode with LeetHub.",
-        "stack": "C++"
-      },
-      "ds_a": {
-        "description": "Data structures and algorithms practice.",
-        "stack": "C++"
-      },
-      "react": {
-        "description": "React fundamentals practice.",
-        "stack": "React"
-      },
-      "react-redux-toolkit-project": {
-        "description": "State management with Redux Toolkit.",
-        "stack": "React · Redux Toolkit"
-      },
-      "react-context-api-project-02": {
-        "description": "Context API practice, part two.",
-        "stack": "React"
-      },
-      "react-context-api-project": {
-        "description": "Context API practice.",
-        "stack": "React"
-      },
-      "react-router-dom-project": {
-        "description": "Client-side routing with React Router.",
-        "stack": "React · React Router"
-      },
-      "react_int_jobs_project": {
-        "description": "Jobs listing app with a JSON Server mock API.",
-        "stack": "React · JSON Server"
-      },
-      "five-react-basic-projects": {
-        "description": "Five beginner React projects.",
-        "stack": "React"
-      },
-      "demo-demo": {
-        "description": "Git and GitHub practice.",
-        "stack": "JavaScript"
-      },
-      "localrepo": {
-        "description": "My first Git repository.",
-        "stack": "HTML"
-      },
-      "portfolio": {
-        "description": "Portfolio site experiment with light/dark mode.",
-        "stack": "React · Tailwind CSS · DaisyUI"
-      }
-    }
-  },
   "techStack": [
     {
-      "category": "Languages",
+      "category": "Programming Languages",
       "items": [
-        {
-          "name": "TypeScript",
-          "logo": "typescript",
-          "color": "3178C6",
-          "skill": "ts"
-        },
         {
           "name": "JavaScript",
           "logo": "javascript",
           "color": "F7DF1E",
-          "logoColor": "000000",
-          "skill": "js"
+          "logoColor": "000000"
+        },
+        {
+          "name": "TypeScript",
+          "logo": "typescript",
+          "color": "3178C6"
         },
         {
           "name": "C++",
           "logo": "cplusplus",
-          "color": "00599C",
-          "skill": "cpp"
+          "color": "00599C"
         },
         {
           "name": "Python",
           "logo": "python",
-          "color": "3776AB",
-          "skill": "py"
+          "color": "3776AB"
         },
         {
-          "name": "SQL",
-          "logo": "postgresql",
-          "color": "336791"
-        },
-        {
-          "name": "HTML",
-          "logo": "html5",
-          "color": "E34F26",
-          "skill": "html"
-        },
-        {
-          "name": "CSS",
-          "logo": "css",
-          "color": "663399",
-          "skill": "css"
+          "name": "C",
+          "logo": "c",
+          "color": "A8B9CC",
+          "logoColor": "000000"
         }
       ]
     },
@@ -195,22 +48,19 @@
       "category": "Frontend",
       "items": [
         {
-          "name": "React",
-          "logo": "react",
-          "color": "087EA4",
-          "skill": "react"
-        },
-        {
           "name": "Next.js",
           "logo": "nextdotjs",
-          "color": "000000",
-          "skill": "nextjs"
+          "color": "000000"
+        },
+        {
+          "name": "React",
+          "logo": "react",
+          "color": "087EA4"
         },
         {
           "name": "Vite",
           "logo": "vite",
-          "color": "646CFF",
-          "skill": "vite"
+          "color": "646CFF"
         },
         {
           "name": "React Router",
@@ -220,8 +70,7 @@
         {
           "name": "Tailwind CSS",
           "logo": "tailwindcss",
-          "color": "06B6D4",
-          "skill": "tailwind"
+          "color": "0595AD"
         },
         {
           "name": "shadcn/ui",
@@ -236,49 +85,71 @@
         {
           "name": "MUI",
           "logo": "mui",
-          "color": "007FFF",
-          "skill": "materialui"
+          "color": "007FFF"
         },
         {
           "name": "GSAP",
           "logo": "greensock",
-          "color": "0AE448",
-          "logoColor": "000000"
+          "color": "079E32"
         },
         {
           "name": "Framer Motion",
           "logo": "framer",
           "color": "0055FF"
+        },
+        {
+          "name": "HTML5",
+          "logo": "html5",
+          "color": "E34F26"
+        },
+        {
+          "name": "CSS3",
+          "logo": "css",
+          "color": "663399"
         }
       ]
     },
     {
-      "category": "State & forms",
+      "category": "State management",
       "items": [
-        {
-          "name": "TanStack Query",
-          "logo": "reactquery",
-          "color": "FF4154"
-        },
-        {
-          "name": "TanStack Table",
-          "logo": "reacttable",
-          "color": "FF4154"
-        },
         {
           "name": "Redux Toolkit",
           "logo": "redux",
-          "color": "764ABC",
-          "skill": "redux"
+          "color": "764ABC"
         },
         {
           "name": "Zustand",
           "color": "433E38"
+        }
+      ]
+    },
+    {
+      "category": "Data fetching",
+      "items": [
+        {
+          "name": "TanStack Query",
+          "logo": "reactquery",
+          "color": "FA4052"
         },
+        {
+          "name": "TanStack Table",
+          "logo": "reacttable",
+          "color": "FA4052"
+        }
+      ]
+    },
+    {
+      "category": "Forms & validation",
+      "items": [
         {
           "name": "React Hook Form",
           "logo": "reacthookform",
-          "color": "EC5990"
+          "color": "E3558A"
+        },
+        {
+          "name": "Formik",
+          "logo": "formik",
+          "color": "172B4D"
         },
         {
           "name": "Zod",
@@ -291,33 +162,24 @@
       "category": "Backend",
       "items": [
         {
-          "name": "Node.js",
-          "logo": "nodedotjs",
-          "color": "5FA04E",
-          "skill": "nodejs"
-        },
-        {
           "name": "Bun",
           "logo": "bun",
-          "color": "000000",
-          "skill": "bun"
-        },
-        {
-          "name": "Express",
-          "logo": "express",
-          "color": "000000",
-          "skill": "express"
+          "color": "000000"
         },
         {
           "name": "NestJS",
           "logo": "nestjs",
-          "color": "E0234E",
-          "skill": "nestjs"
+          "color": "E0234E"
         },
         {
-          "name": "Elysia",
-          "color": "8B5CF6",
-          "skill": "elysia"
+          "name": "Express",
+          "logo": "express",
+          "color": "000000"
+        },
+        {
+          "name": "Node.js",
+          "logo": "nodedotjs",
+          "color": "599749"
         },
         {
           "name": "BullMQ",
@@ -328,6 +190,10 @@
           "color": "010101"
         },
         {
+          "name": "Elysia",
+          "color": "8B5CF6"
+        },
+        {
           "name": "JWT",
           "logo": "jsonwebtokens",
           "color": "000000"
@@ -335,8 +201,7 @@
         {
           "name": "Passport",
           "logo": "passport",
-          "color": "34E27A",
-          "logoColor": "000000"
+          "color": "239A53"
         }
       ]
     },
@@ -344,27 +209,23 @@
       "category": "Databases",
       "items": [
         {
-          "name": "PostgreSQL",
-          "logo": "postgresql",
-          "color": "4169E1",
-          "skill": "postgres"
+          "name": "MongoDB",
+          "logo": "mongodb",
+          "color": "439844"
         },
         {
           "name": "Supabase",
           "logo": "supabase",
-          "color": "3FCF8E",
-          "logoColor": "000000",
-          "skill": "supabase"
+          "color": "2F9969"
         },
         {
-          "name": "pgvector",
+          "name": "PostgreSQL",
+          "logo": "postgresql",
+          "color": "4169E1"
+        },
+        {
+          "name": "SQL",
           "color": "336791"
-        },
-        {
-          "name": "MongoDB",
-          "logo": "mongodb",
-          "color": "47A248",
-          "skill": "mongodb"
         },
         {
           "name": "Mongoose",
@@ -374,8 +235,7 @@
         {
           "name": "Redis",
           "logo": "redis",
-          "color": "FF4438",
-          "skill": "redis"
+          "color": "FA4337"
         }
       ]
     },
@@ -383,16 +243,7 @@
       "category": "AI & automation",
       "items": [
         {
-          "name": "AI agents",
-          "color": "000000"
-        },
-        {
-          "name": "Vercel AI SDK",
-          "logo": "vercel",
-          "color": "000000"
-        },
-        {
-          "name": "OpenAI API",
+          "name": "OpenAI",
           "color": "412991"
         },
         {
@@ -413,24 +264,27 @@
         {
           "name": "Puppeteer",
           "logo": "puppeteer",
-          "color": "40B5A4",
-          "logoColor": "000000"
+          "color": "359789"
         },
         {
           "name": "Cheerio",
           "logo": "cheerio",
-          "color": "E88C1F"
+          "color": "C1751A"
+        },
+        {
+          "name": "Vercel AI SDK",
+          "logo": "vercel",
+          "color": "000000"
+        },
+        {
+          "name": "AI agents",
+          "color": "000000"
         }
       ]
     },
     {
       "category": "Integrations",
       "items": [
-        {
-          "name": "Stripe",
-          "logo": "stripe",
-          "color": "635BFF"
-        },
         {
           "name": "PayPal",
           "logo": "paypal",
@@ -474,12 +328,17 @@
           "color": "111827"
         },
         {
-          "name": "Resend",
-          "logo": "resend",
+          "name": "Webhooks",
           "color": "000000"
         },
         {
-          "name": "Webhooks",
+          "name": "Stripe",
+          "logo": "stripe",
+          "color": "635BFF"
+        },
+        {
+          "name": "Resend",
+          "logo": "resend",
           "color": "000000"
         }
       ]
@@ -488,14 +347,33 @@
       "category": "Testing & tooling",
       "items": [
         {
+          "name": "Prettier",
+          "logo": "prettier",
+          "color": "F7B93E",
+          "logoColor": "000000"
+        },
+        {
+          "name": "Turbopack",
+          "color": "000000"
+        },
+        {
+          "name": "Jest",
+          "logo": "jest",
+          "color": "C21325"
+        },
+        {
+          "name": "Cypress",
+          "logo": "cypress",
+          "color": "4A9676"
+        },
+        {
           "name": "Vitest",
           "logo": "vitest",
-          "color": "6E9F18",
-          "skill": "vitest"
+          "color": "689617"
         },
         {
           "name": "Playwright",
-          "color": "2EAD33"
+          "color": "2A9C2E"
         },
         {
           "name": "Testing Library",
@@ -508,12 +386,6 @@
           "color": "4B32C3"
         },
         {
-          "name": "Prettier",
-          "logo": "prettier",
-          "color": "F7B93E",
-          "logoColor": "000000"
-        },
-        {
           "name": "Turborepo",
           "logo": "turborepo",
           "color": "EF4444"
@@ -521,8 +393,7 @@
         {
           "name": "Git",
           "logo": "git",
-          "color": "F05032",
-          "skill": "git"
+          "color": "F05032"
         }
       ]
     },
@@ -532,38 +403,53 @@
         {
           "name": "Docker",
           "logo": "docker",
-          "color": "2496ED",
-          "skill": "docker"
+          "color": "228DDF"
         },
         {
           "name": "GitHub Actions",
           "logo": "githubactions",
-          "color": "2088FF",
-          "skill": "githubactions"
+          "color": "1F85FA"
         },
         {
           "name": "Vercel",
           "logo": "vercel",
-          "color": "000000",
-          "skill": "vercel"
-        },
-        {
-          "name": "Cloudflare",
-          "logo": "cloudflare",
-          "color": "F38020",
-          "skill": "cloudflare"
-        },
-        {
-          "name": "Traefik",
-          "logo": "traefikproxy",
-          "color": "24A1C1"
+          "color": "000000"
         },
         {
           "name": "Linux",
           "logo": "linux",
           "color": "FCC624",
-          "logoColor": "000000",
-          "skill": "linux"
+          "logoColor": "000000"
+        },
+        {
+          "name": "Kubernetes",
+          "logo": "kubernetes",
+          "color": "326CE5"
+        },
+        {
+          "name": "Ansible",
+          "logo": "ansible",
+          "color": "EE0000"
+        },
+        {
+          "name": "Prometheus",
+          "logo": "prometheus",
+          "color": "E6522C"
+        },
+        {
+          "name": "Grafana",
+          "logo": "grafana",
+          "color": "E16000"
+        },
+        {
+          "name": "Cloudflare",
+          "logo": "cloudflare",
+          "color": "CF6D1B"
+        },
+        {
+          "name": "Traefik",
+          "logo": "traefikproxy",
+          "color": "2093AF"
         }
       ]
     }

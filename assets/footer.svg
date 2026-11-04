@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="854" height="110" viewBox="0 0 854 110" role="presentation">
+  <defs>
+    <linearGradient id="wave" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+  </defs>
+  <g transform="rotate(180 427 55)">
+    <path d="M0 0L0 30Q213.5 70 427 40T854 65L854 0Z" fill="url(#wave)" opacity="0.4"/>
+    <path d="M0 0L0 60Q213.5 30 427 30T854 50L854 0Z" fill="url(#wave)" opacity="0.4"/>
+  </g>
+</svg>

@@ -3,36 +3,17 @@ import { formatDate, MONTHS } from './stats.mjs';
 const SANS = `-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans',Helvetica,Arial,sans-serif`;
 const MONO = `ui-monospace,SFMono-Regular,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace`;
 
-/**
- * Each theme has a dark and a light palette. The README picks one with
- * <picture> + prefers-color-scheme, so every card is rendered twice.
- */
-export const THEMES = {
-  mono: {
-    animate: false,
-    dark: {
-      bg: '#0d1117', border: '#30363d', title: '#f0f6fc', text: '#e6edf3', muted: '#9198a1', faint: '#3d444d',
-      track: '#21262d', bar: '#656c76', strong: '#f0f6fc', easy: '#f0f6fc', medium: '#f0f6fc', hard: '#f0f6fc',
-      gradient: null,
-    },
-    light: {
-      bg: '#ffffff', border: '#d1d9e0', title: '#1f2328', text: '#1f2328', muted: '#59636e', faint: '#d1d9e0',
-      track: '#eff2f5', bar: '#9ea7b3', strong: '#1f2328', easy: '#1f2328', medium: '#1f2328', hard: '#1f2328',
-      gradient: null,
-    },
+/** The README picks a palette with <picture> + prefers-color-scheme, so every card is rendered twice. */
+export const PALETTES = {
+  dark: {
+    bg: '#0b1020', border: '#1e293b', title: '#f8fafc', text: '#e2e8f0', muted: '#94a3b8', faint: '#334155',
+    track: '#1e293b', bar: 'url(#vg)', strong: 'url(#vg)', easy: '#2dd4bf', medium: '#fbbf24', hard: '#fb7185',
+    gradient: ['#22d3ee', '#818cf8', '#c084fc'],
   },
-  accent: {
-    animate: true,
-    dark: {
-      bg: '#0b1020', border: '#1e293b', title: '#f8fafc', text: '#e2e8f0', muted: '#94a3b8', faint: '#334155',
-      track: '#1e293b', bar: 'url(#vg)', strong: 'url(#vg)', easy: '#2dd4bf', medium: '#fbbf24', hard: '#fb7185',
-      gradient: ['#22d3ee', '#818cf8', '#c084fc'],
-    },
-    light: {
-      bg: '#ffffff', border: '#e2e8f0', title: '#0f172a', text: '#1e293b', muted: '#64748b', faint: '#cbd5e1',
-      track: '#f1f5f9', bar: 'url(#vg)', strong: 'url(#vg)', easy: '#0d9488', medium: '#d97706', hard: '#e11d48',
-      gradient: ['#0891b2', '#6366f1', '#9333ea'],
-    },
+  light: {
+    bg: '#ffffff', border: '#e2e8f0', title: '#0f172a', text: '#1e293b', muted: '#64748b', faint: '#cbd5e1',
+    track: '#f1f5f9', bar: 'url(#vg)', strong: 'url(#vg)', easy: '#0d9488', medium: '#d97706', hard: '#e11d48',
+    gradient: ['#0891b2', '#6366f1', '#9333ea'],
   },
 };
 
@@ -49,25 +30,13 @@ function stops(colors) {
     .join('');
 }
 
-/** Shared frame: background, border, title row, fonts, optional gradient and animation. */
-function card({ width, height, palette, animate, title, subtitle, label, body }) {
+/** Shared frame: background, border, title row, fonts and gradients. Cards are fully static. */
+function card({ width, height, palette, title, subtitle, label, body }) {
   const p = palette;
-  const gradient = p.gradient
-    ? `<defs>
+  const gradient = `<defs>
   <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1">${stops(p.gradient)}</linearGradient>
   <linearGradient id="vg" x1="0" y1="1" x2="0" y2="0">${stops(p.gradient)}</linearGradient>
-</defs>`
-    : '';
-  const motion = animate
-    ? `
-  .fade{opacity:0;animation:fade .7s ease-out forwards}
-  .grow{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:grow .9s cubic-bezier(.2,.8,.2,1) forwards}
-  .growx{transform-box:fill-box;transform-origin:0 50%;transform:scaleX(0);animation:growx .9s cubic-bezier(.2,.8,.2,1) forwards}
-  @keyframes fade{to{opacity:1}}
-  @keyframes grow{to{transform:scaleY(1)}}
-  @keyframes growx{to{transform:scaleX(1)}}
-  @media (prefers-reduced-motion:reduce){.fade{animation:none;opacity:1}.grow,.growx{animation:none;transform:none}}`
-    : '';
+</defs>`;
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="${escapeXml(label)}">
 <title>${escapeXml(label)}</title>
@@ -77,13 +46,13 @@ ${gradient}
   .mono{font-family:${MONO}}
   .title{font-size:14px;font-weight:600;fill:${p.title}}
   .sub{font-size:12px;fill:${p.muted}}
-  .big{font-weight:700;fill:${p.gradient ? 'url(#hg)' : p.title};letter-spacing:-.02em}
+  .big{font-weight:700;fill:url(#hg);letter-spacing:-.02em}
   .value{font-size:17px;font-weight:600;fill:${p.title}}
   .label{font-size:11px;fill:${p.muted}}
   .tiny{font-size:10px;fill:${p.muted}}
-  .strong{fill:${p.title};font-weight:600}${motion}
+  .strong{fill:${p.title};font-weight:600}
 </style>
-<rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="10" fill="${p.bg}" stroke="${p.gradient ? 'url(#hg)' : p.border}"${p.gradient ? ' stroke-opacity="0.55"' : ''}/>
+<rect x="0.5" y="0.5" width="${width - 1}" height="${height - 1}" rx="10" fill="${p.bg}" stroke="url(#hg)" stroke-opacity="0.55"/>
 <text x="24" y="36" class="title">${escapeXml(title)}</text>
 <text x="${width - 24}" y="36" class="sub" text-anchor="end">${escapeXml(subtitle)}</text>
 ${body}
@@ -91,12 +60,9 @@ ${body}
 `;
 }
 
-const delay = (ms) => (ms ? ` style="animation-delay:${ms}ms"` : '');
-
 /** All-time overview: total contributions, contributions per year, streaks, repos. */
-export function renderOverviewCard(stats, theme, mode) {
-  const p = THEMES[theme][mode];
-  const animate = THEMES[theme].animate;
+export function renderOverviewCard(stats, mode) {
+  const p = PALETTES[mode];
   const width = 420;
   const height = 220;
   const since = `${MONTHS[Number(stats.since.slice(5, 7)) - 1]} ${stats.since.slice(0, 4)}`;
@@ -115,8 +81,8 @@ export function renderOverviewCard(stats, theme, mode) {
       const cx = r1(x0 + slot * i + slot / 2);
       const current = y.year === stats.year;
       const fill = current ? p.strong : p.bar;
-      const opacity = !current && p.gradient ? ' fill-opacity="0.45"' : '';
-      return `<rect class="grow"${delay(animate ? i * 90 : 0)} x="${r1(cx - barWidth / 2)}" y="${base - h}" width="${r1(barWidth)}" height="${h}" rx="3" fill="${fill}"${opacity}/>
+      const opacity = current ? '' : ' fill-opacity="0.45"';
+      return `<rect x="${r1(cx - barWidth / 2)}" y="${base - h}" width="${r1(barWidth)}" height="${h}" rx="3" fill="${fill}"${opacity}/>
 <text x="${cx}" y="${base - h - 6}" class="tiny${current ? ' strong' : ''}" text-anchor="middle">${fmt(y.total)}</text>
 <text x="${cx}" y="${base + 16}" class="tiny${current ? ' strong' : ''}" text-anchor="middle">${y.year}</text>`;
     })
@@ -130,12 +96,12 @@ export function renderOverviewCard(stats, theme, mode) {
   ]
     .map(
       ([value, label], i) =>
-        `<g class="fade"${delay(animate ? 300 + i * 80 : 0)}><text x="${24 + i * 96}" y="180" class="value">${escapeXml(value)}</text>
+        `<g><text x="${24 + i * 96}" y="180" class="value">${escapeXml(value)}</text>
 <text x="${24 + i * 96}" y="198" class="label">${escapeXml(label)}</text></g>`,
     )
     .join('\n');
 
-  const body = `<g class="fade">
+  const body = `<g>
 <text x="24" y="96" class="big" font-size="38">${fmt(stats.allTime.total)}</text>
 <text x="24" y="119" class="label">contributions since ${escapeXml(since)}</text>
 </g>
@@ -144,7 +110,7 @@ ${bars}
 ${columns}`;
 
   return card({
-    width, height, palette: p, animate,
+    width, height, palette: p,
     title: 'GitHub', subtitle: `@${stats.login}`,
     label: `GitHub: ${fmt(stats.allTime.total)} contributions since ${since}, ${fmt(stats.thisYear.total)} in ${stats.year}, current streak ${stats.allTime.currentStreak} days, longest streak ${stats.allTime.longestStreak.length} days, ${stats.publicRepos} public repositories.`,
     body,
@@ -152,15 +118,14 @@ ${columns}`;
 }
 
 /** LeetCode-style ring: three arcs sized by question count, filled by solved share. */
-export function renderLeetCodeCard(lc, theme, mode) {
-  const p = THEMES[theme][mode];
-  const animate = THEMES[theme].animate;
+export function renderLeetCodeCard(lc, mode) {
+  const p = PALETTES[mode];
   const width = 420;
   const height = 220;
 
   if (!lc) {
     return card({
-      width, height, palette: p, animate, title: 'LeetCode', subtitle: '', label: 'LeetCode stats are unavailable right now.',
+      width, height, palette: p, title: 'LeetCode', subtitle: '', label: 'LeetCode stats are unavailable right now.',
       body: `<text x="24" y="120" class="label">LeetCode stats are unavailable right now.</text>`,
     });
   }
@@ -186,7 +151,7 @@ export function renderLeetCodeCard(lc, theme, mode) {
       // and shifted by half of one. Tiny progress becomes a dot, like the bars on the right.
       const dash = Math.max(0.01, Math.min(length, length * share) - strokeWidth);
       const fill = lc.solved[d] > 0
-        ? `<g class="fade"><circle ${common} stroke="${p[d]}" stroke-linecap="round" stroke-dasharray="${r1(dash) || 0.01} ${r1(circumference - dash)}" stroke-dashoffset="${r1(-(offset + strokeWidth / 2))}"/></g>`
+        ? `<circle ${common} stroke="${p[d]}" stroke-linecap="round" stroke-dasharray="${r1(dash) || 0.01} ${r1(circumference - dash)}" stroke-dashoffset="${r1(-(offset + strokeWidth / 2))}"/>`
         : '';
       offset += length + gap;
       return track + fill;
@@ -201,11 +166,10 @@ export function renderLeetCodeCard(lc, theme, mode) {
       const y = 80 + i * 40;
       const share = lc.totals[d] ? lc.solved[d] / lc.totals[d] : 0;
       const w = lc.solved[d] > 0 ? Math.max(6, barWidth * share) : 0;
-      const color = p.gradient ? p[d] : p.title;
-      return `<text x="${barX}" y="${y}" font-size="12.5" font-weight="600" style="fill:${color}">${label[d]}</text>
+            return `<text x="${barX}" y="${y}" font-size="12.5" font-weight="600" style="fill:${p[d]}">${label[d]}</text>
 <text x="${barX + barWidth}" y="${y}" class="label mono" text-anchor="end"><tspan class="strong">${fmt(lc.solved[d])}</tspan> / ${fmt(lc.totals[d])}</text>
 <rect x="${barX}" y="${y + 9}" width="${barWidth}" height="6" rx="3" fill="${p.track}"/>
-${w ? `<rect class="growx"${delay(animate ? 200 + i * 120 : 0)} x="${barX}" y="${y + 9}" width="${r1(w)}" height="6" rx="3" fill="${p[d]}"/>` : ''}`;
+${w ? `<rect x="${barX}" y="${y + 9}" width="${r1(w)}" height="6" rx="3" fill="${p[d]}"/>` : ''}`;
     })
     .join('\n');
 
@@ -226,7 +190,7 @@ ${w ? `<rect class="growx"${delay(animate ? 200 + i * 120 : 0)} x="${barX}" y="$
     .join(' · ');
 
   const body = `${arcs}
-<g class="fade">
+<g>
 <text x="${cx}" y="${cy - 19}" class="label" text-anchor="middle">solved</text>
 <text x="${cx}" y="${cy + 9}" class="big" font-size="28" text-anchor="middle">${fmt(lc.solved.all)}</text>
 <text x="${cx}" y="${cy + 27}" class="tiny" text-anchor="middle">of ${fmt(lc.totals.all)}</text>
@@ -235,7 +199,7 @@ ${rows}
 <text x="24" y="204" class="label">${escapeXml(footer)}</text>`;
 
   return card({
-    width, height, palette: p, animate,
+    width, height, palette: p,
     title: 'LeetCode', subtitle,
     label: `LeetCode: ${lc.solved.all} of ${lc.totals.all} problems solved (Easy ${lc.solved.easy}, Medium ${lc.solved.medium}, Hard ${lc.solved.hard}).`,
     body,
@@ -243,9 +207,8 @@ ${rows}
 }
 
 /** This year's contributions: total, averages and a month-by-month bar chart. */
-export function renderActivityCard(stats, theme, mode) {
-  const p = THEMES[theme][mode];
-  const animate = THEMES[theme].animate;
+export function renderActivityCard(stats, mode) {
+  const p = PALETTES[mode];
   const width = 860;
   const height = 272;
   const y = stats.thisYear;
@@ -259,7 +222,7 @@ export function renderActivityCard(stats, theme, mode) {
     .map(([value, label], i) => {
       const x = 24 + (i % 2) * 124;
       const top = 160 + Math.floor(i / 2) * 46;
-      return `<g class="fade"${delay(animate ? 200 + i * 80 : 0)}><text x="${x}" y="${top}" class="value">${escapeXml(value)}</text>
+      return `<g><text x="${x}" y="${top}" class="value">${escapeXml(value)}</text>
 <text x="${x}" y="${top + 17}" class="label">${escapeXml(label)}</text></g>`;
     })
     .join('\n');
@@ -283,9 +246,9 @@ export function renderActivityCard(stats, theme, mode) {
       }
       const h = count > 0 ? Math.max(3, Math.round((count / max) * maxHeight)) : 1;
       const fill = isCurrent ? p.strong : p.bar;
-      const opacity = !isCurrent && p.gradient ? ' fill-opacity="0.5"' : '';
+      const opacity = isCurrent ? '' : ' fill-opacity="0.5"';
       const value = count > 0 ? `<text x="${cx}" y="${base - h - 6}" class="tiny${isCurrent ? ' strong' : ''}" text-anchor="middle">${fmt(count)}</text>` : '';
-      return `<rect class="grow"${delay(animate ? i * 60 : 0)} x="${x}" y="${base - h}" width="${barWidth}" height="${h}" rx="3" fill="${fill}"${opacity}/>\n${value}\n${monthLabel}`;
+      return `<rect x="${x}" y="${base - h}" width="${barWidth}" height="${h}" rx="3" fill="${fill}"${opacity}/>\n${value}\n${monthLabel}`;
     })
     .join('\n');
 
@@ -299,7 +262,7 @@ export function renderActivityCard(stats, theme, mode) {
     .filter(Boolean)
     .join('  ·  ');
 
-  const body = `<g class="fade">
+  const body = `<g>
 <text x="24" y="98" class="big" font-size="46">${fmt(y.total)}</text>
 <text x="24" y="122" class="label">contributions in ${stats.year} so far</text>
 </g>
@@ -311,7 +274,7 @@ ${bars}
 <text x="24" y="257" class="label">${escapeXml(footer)}</text>`;
 
   return card({
-    width, height, palette: p, animate,
+    width, height, palette: p,
     title: `${stats.year} activity`,
     subtitle: `updated ${formatDate(stats.today)}`,
     label: `${stats.year}: ${fmt(y.total)} contributions so far, ${fmt1(y.averages.perDay)} per day and ${fmt1(y.averages.perWeek)} per week on average, ${y.activeDays} active days.`,

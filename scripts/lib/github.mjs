@@ -9,27 +9,7 @@ const PROFILE_QUERY = `query ($login: String!) {
     createdAt
     followers { totalCount }
     pullRequests { totalCount }
-    repositories(
-      ownerAffiliations: OWNER
-      privacy: PUBLIC
-      isFork: false
-      first: 100
-      orderBy: { field: PUSHED_AT, direction: DESC }
-    ) {
-      totalCount
-      nodes {
-        name
-        description
-        url
-        homepageUrl
-        stargazerCount
-        forkCount
-        pushedAt
-        createdAt
-        isArchived
-        primaryLanguage { name }
-      }
-    }
+    repositories(ownerAffiliations: OWNER, privacy: PUBLIC, isFork: false) { totalCount }
   }
 }`;
 
@@ -70,9 +50,9 @@ async function graphql(token, query, variables) {
 }
 
 /**
- * Profile, public repositories and the contribution calendar for every year since
- * the account was created. Private repositories are never requested (privacy: PUBLIC),
- * so a token with private scope cannot leak private repository names into the README.
+ * Profile, public repository count and the contribution calendar for every year since
+ * the account was created. Only a count of public repositories is requested, so a token with
+ * private scope cannot leak private repository names into the README.
  * Private *contribution counts* are still included when the user has enabled
  * "Include private contributions on my profile".
  */
@@ -110,34 +90,8 @@ export async function fetchGitHub({ login, token, now = new Date() }) {
     followers: user.followers.totalCount,
     pullRequests: user.pullRequests.totalCount,
     publicRepoCount: user.repositories.totalCount,
-    repos: user.repositories.nodes.map((repo) => ({
-      name: repo.name,
-      description: repo.description,
-      url: repo.url,
-      homepage: repo.homepageUrl || null,
-      stars: repo.stargazerCount,
-      forks: repo.forkCount,
-      pushedAt: repo.pushedAt,
-      createdAt: repo.createdAt,
-      archived: repo.isArchived,
-      language: repo.primaryLanguage?.name ?? null,
-    })),
     years,
   };
-}
-
-/** True when a file exists on a branch (used to show the snake only once it has been drawn). */
-export async function fileExists({ owner, repo, path, ref, token }) {
-  try {
-    await fetchJson(
-      `https://api.github.com/repos/${owner}/${repo}/contents/${path}?ref=${encodeURIComponent(ref)}`,
-      { headers: headers(token) },
-      { label: `GitHub contents ${owner}/${repo}/${path}@${ref}`, retries: 2 },
-    );
-    return true;
-  } catch {
-    return false;
-  }
 }
 
 /** Top-level folders of a public repository (used to link LeetHub solution folders). */
