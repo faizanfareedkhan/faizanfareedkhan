@@ -35,12 +35,6 @@
           "name": "Python",
           "logo": "python",
           "color": "3776AB"
-        },
-        {
-          "name": "C",
-          "logo": "c",
-          "color": "A8B9CC",
-          "logoColor": "000000"
         }
       ]
     },

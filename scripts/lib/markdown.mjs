@@ -37,11 +37,11 @@ export function techTable(stack) {
 /** The hero buttons. Anything without a link is left out, so a button never goes nowhere. */
 export function contactBadges(contact, resumeUrl) {
   return [
-    resumeUrl && { label: 'Resume', href: resumeUrl, logo: RESUME_LOGO, color: '4F46E5' },
-    contact.portfolio && { label: 'Portfolio', href: contact.portfolio, logo: PORTFOLIO_LOGO, color: '0891B2' },
-    contact.linkedin && { label: 'LinkedIn', href: contact.linkedin, logo: LINKEDIN_LOGO, color: '0A66C2' },
     contact.email && { label: 'Email', href: `mailto:${contact.email}`, logo: 'gmail', color: 'EA4335' },
+    contact.linkedin && { label: 'LinkedIn', href: contact.linkedin, logo: LINKEDIN_LOGO, color: '0A66C2' },
     contact.leetcode && { label: 'LeetCode', href: contact.leetcode, logo: 'leetcode', color: 'BC7710' },
+    contact.portfolio && { label: 'Portfolio', href: contact.portfolio, logo: PORTFOLIO_LOGO, color: '0891B2' },
+    resumeUrl && { label: 'Resume', href: resumeUrl, logo: RESUME_LOGO, color: '4F46E5' },
   ]
     .filter(Boolean)
     .map((item) => `<a href="${escapeAttr(item.href)}"><img src="${badgeUrl(item)}" alt="${escapeAttr(item.label)}"></a>`)

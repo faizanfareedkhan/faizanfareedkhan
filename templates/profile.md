@@ -49,6 +49,6 @@ Full Stack Developer with 3+ years of experience building production web applica
 
 {{LEETCODE_RECENT}}
 
-<p align="center"><sub>Stats refresh automatically every hour via GitHub Actions · updated {{UPDATED}}</sub></p>
+<p align="center"><sub>Stats refresh automatically via GitHub Actions · updated {{UPDATED}}</sub></p>
 
 <img src="assets/footer.svg" width="100%" alt="">

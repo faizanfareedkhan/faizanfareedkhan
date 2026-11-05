@@ -2,7 +2,9 @@ name: Profile stats
 
 on:
   schedule:
-    - cron: "23 * * * *" # every hour
+    # Every 15 minutes, off the top of the hour. GitHub can run these late or skip them.
+    - cron: "7,22,37,52 * * * *"
+  # Also called by the leet_code repo after every LeetHub push.
   workflow_dispatch:
   push:
     branches: [main]

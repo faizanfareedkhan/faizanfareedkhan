@@ -60,8 +60,8 @@ test('hero buttons follow the agreed order and skip anything without a link', ()
     leetcode: 'https://leetcode.com/u/x/',
   };
   const labels = (html) => [...html.matchAll(/alt="([^"]+)"/g)].map((match) => match[1]);
-  assert.deepEqual(labels(contactBadges(contact, 'https://example.com/cv.pdf')), ['Resume', 'Portfolio', 'LinkedIn', 'Email', 'LeetCode']);
-  assert.deepEqual(labels(contactBadges({ ...contact, portfolio: null }, null)), ['LinkedIn', 'Email', 'LeetCode']);
+  assert.deepEqual(labels(contactBadges(contact, 'https://example.com/cv.pdf')), ['Email', 'LinkedIn', 'LeetCode', 'Portfolio', 'Resume']);
+  assert.deepEqual(labels(contactBadges({ ...contact, portfolio: null }, null)), ['Email', 'LinkedIn', 'LeetCode']);
 });
 
 test('tech table escapes badge labels and has one row per category', () => {
