@@ -100,9 +100,9 @@
       "medium": 2139,
       "hard": 987
     },
-    "acceptance": 57.89473684210527,
+    "acceptance": 57.14285714285714,
     "maxStreak": 2,
-    "activeDays": 6,
+    "activeDays": 7,
     "languages": [
       "C++",
       "JavaScript",
@@ -163,9 +163,9 @@
       "hard": 987
     },
     "acceptedSubmissions": 44,
-    "totalSubmissions": 76,
+    "totalSubmissions": 77,
     "maxStreak": 2,
-    "activeDays": 6,
+    "activeDays": 7,
     "languages": [
       {
         "name": "C++",
