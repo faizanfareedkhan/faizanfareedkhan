@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="420" height="220" viewBox="0 0 420 220" role="img" aria-label="LeetCode: 11 of 4105 problems solved (Easy 9, Medium 2, Hard 0).">
-<title>LeetCode: 11 of 4105 problems solved (Easy 9, Medium 2, Hard 0).</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="220" viewBox="0 0 420 220" role="img" aria-label="LeetCode: 11 of 4109 problems solved (Easy 9, Medium 2, Hard 0).">
+<title>LeetCode: 11 of 4109 problems solved (Easy 9, Medium 2, Hard 0).</title>
 <defs>
   <linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#818cf8"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
   <linearGradient id="vg" x1="0" y1="1" x2="0" y2="0"><stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#818cf8"/><stop offset="100%" stop-color="#c084fc"/></linearGradient>
@@ -18,24 +18,24 @@
 <rect x="0.5" y="0.5" width="419" height="219" rx="10" fill="#0b1020" stroke="url(#hg)" stroke-opacity="0.55"/>
 <text x="24" y="36" class="title">LeetCode</text>
 <text x="396" y="36" class="sub" text-anchor="end">@faizanfareedkhan</text>
-<circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#1e293b" stroke-dasharray="77 262.3" stroke-dashoffset="-2.5"/><circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#2dd4bf" stroke-linecap="round" stroke-dasharray="0.01 339.3" stroke-dashoffset="-6.5"/>
-<circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#1e293b" stroke-dasharray="169.2 170.1" stroke-dashoffset="-84.5"/><circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#fbbf24" stroke-linecap="round" stroke-dasharray="0.01 339.3" stroke-dashoffset="-88.5"/>
+<circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#1e293b" stroke-dasharray="76.9 262.3" stroke-dashoffset="-2.5"/><circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#2dd4bf" stroke-linecap="round" stroke-dasharray="0.01 339.3" stroke-dashoffset="-6.5"/>
+<circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#1e293b" stroke-dasharray="169.3 170" stroke-dashoffset="-84.4"/><circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#fbbf24" stroke-linecap="round" stroke-dasharray="0.01 339.3" stroke-dashoffset="-88.4"/>
 <circle cx="92" cy="122" r="54" fill="none" stroke-width="8" transform="rotate(-90 92 122)" stroke="#1e293b" stroke-dasharray="78.1 261.2" stroke-dashoffset="-258.7"/>
 <g>
 <text x="92" y="103" class="label" text-anchor="middle">solved</text>
 <text x="92" y="131" class="big" font-size="28" text-anchor="middle">11</text>
-<text x="92" y="149" class="tiny" text-anchor="middle">of 4,105</text>
+<text x="92" y="149" class="tiny" text-anchor="middle">of 4,109</text>
 </g>
 <text x="180" y="80" font-size="12.5" font-weight="600" style="fill:#2dd4bf">Easy</text>
 <text x="396" y="80" class="label mono" text-anchor="end"><tspan class="strong">9</tspan> / 975</text>
 <rect x="180" y="89" width="216" height="6" rx="3" fill="#1e293b"/>
 <rect x="180" y="89" width="6" height="6" rx="3" fill="#2dd4bf"/>
 <text x="180" y="120" font-size="12.5" font-weight="600" style="fill:#fbbf24">Medium</text>
-<text x="396" y="120" class="label mono" text-anchor="end"><tspan class="strong">2</tspan> / 2,142</text>
+<text x="396" y="120" class="label mono" text-anchor="end"><tspan class="strong">2</tspan> / 2,145</text>
 <rect x="180" y="129" width="216" height="6" rx="3" fill="#1e293b"/>
 <rect x="180" y="129" width="6" height="6" rx="3" fill="#fbbf24"/>
 <text x="180" y="160" font-size="12.5" font-weight="600" style="fill:#fb7185">Hard</text>
-<text x="396" y="160" class="label mono" text-anchor="end"><tspan class="strong">0</tspan> / 988</text>
+<text x="396" y="160" class="label mono" text-anchor="end"><tspan class="strong">0</tspan> / 989</text>
 <rect x="180" y="169" width="216" height="6" rx="3" fill="#1e293b"/>
 
 <text x="24" y="204" class="label">C++, JavaScript, Python  ·  7 active days  ·  57% acceptance</text>
