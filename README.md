@@ -42,17 +42,17 @@ Full Stack Developer with 3+ years of experience building production web applica
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/overview-dark.svg">
-    <img alt="GitHub: 1,266 contributions since 2022, 785 in 2026" src="assets/generated/overview-light.svg" width="49%">
+    <img alt="GitHub: 1,270 contributions since 2022, 789 in 2026" src="assets/generated/overview-light.svg" width="49%">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/leetcode-dark.svg">
-    <img alt="LeetCode: 11 problems solved (Easy 9, Medium 2, Hard 0)" src="assets/generated/leetcode-light.svg" width="49%">
+    <img alt="LeetCode: 12 problems solved (Easy 9, Medium 3, Hard 0)" src="assets/generated/leetcode-light.svg" width="49%">
   </picture>
 </p>
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/activity-dark.svg">
-    <img alt="2026 activity: 785 contributions, 2.5 per day on average" src="assets/generated/activity-light.svg" width="99%">
+    <img alt="2026 activity: 789 contributions, 2.5 per day on average" src="assets/generated/activity-light.svg" width="99%">
   </picture>
 </p>
 <p align="center">
@@ -64,11 +64,11 @@ Full Stack Developer with 3+ years of experience building production web applica
 
 ## Recently solved on LeetCode
 
+- [Permutations](https://leetcode.com/problems/permutations/) · C++ · 9 Nov 2026 · [solution](https://github.com/faizanfareedkhan/leet_code/tree/main/0046-permutations)
 - [Contains Duplicate](https://leetcode.com/problems/contains-duplicate/) · C++ · 2 Nov 2026 · [solution](https://github.com/faizanfareedkhan/leet_code/tree/main/0217-contains-duplicate)
 - [Subsets II](https://leetcode.com/problems/subsets-ii/) · C++ · 24 Oct 2026 · [solution](https://github.com/faizanfareedkhan/leet_code/tree/main/0090-subsets-ii)
 - [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) · C++ · 20 Oct 2026 · [solution](https://github.com/faizanfareedkhan/leet_code/tree/main/0509-fibonacci-number)
 - [Binary Search](https://leetcode.com/problems/binary-search/) · C++ · 20 Oct 2026 · [solution](https://github.com/faizanfareedkhan/leet_code/tree/main/0704-binary-search)
-- [Subsets](https://leetcode.com/problems/subsets/) · C++ · 20 Oct 2026 · [solution](https://github.com/faizanfareedkhan/leet_code/tree/main/0078-subsets)
 
 <p align="center"><sub>Stats refresh automatically via GitHub Actions · updated 9 Nov 2026</sub></p>
 

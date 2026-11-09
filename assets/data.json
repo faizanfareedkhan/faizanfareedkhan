@@ -5,7 +5,7 @@
     "since": "2022-07-02",
     "publicRepos": 19,
     "allTime": {
-      "total": 1266,
+      "total": 1270,
       "perYear": [
         {
           "year": 2022,
@@ -25,7 +25,7 @@
         },
         {
           "year": 2026,
-          "total": 785
+          "total": 789
         }
       ],
       "longestStreak": {
@@ -33,11 +33,11 @@
         "start": "2024-03-12",
         "end": "2024-03-23"
       },
-      "currentStreak": 0
+      "currentStreak": 1
     },
     "thisYear": {
-      "total": 785,
-      "commits": 33,
+      "total": 789,
+      "commits": 37,
       "pullRequests": 2,
       "reviews": 0,
       "issues": 0,
@@ -53,11 +53,11 @@
         73,
         90,
         75,
-        15,
+        19,
         null
       ],
       "weekdays": [
-        131,
+        135,
         172,
         125,
         149,
@@ -66,7 +66,7 @@
         64
       ],
       "topWeekday": "Tuesday",
-      "activeDays": 180,
+      "activeDays": 181,
       "elapsedDays": 313,
       "busiestDay": {
         "date": "2026-03-17",
@@ -76,12 +76,12 @@
         "name": "Mar",
         "count": 113
       },
-      "last30Days": 56,
+      "last30Days": 60,
       "averages": {
-        "perDay": 2.5079872204472844,
-        "perWeek": 17.55591054313099,
-        "perMonth": 76.33529353035144,
-        "perActiveDay": 4.361111111111111
+        "perDay": 2.5207667731629395,
+        "perWeek": 17.645367412140576,
+        "perMonth": 76.72426317891373,
+        "perActiveDay": 4.359116022099448
       }
     }
   },
@@ -89,9 +89,9 @@
     "username": "faizanfareedkhan",
     "ranking": 5000001,
     "solved": {
-      "all": 11,
+      "all": 12,
       "easy": 9,
-      "medium": 2,
+      "medium": 3,
       "hard": 0
     },
     "totals": {
@@ -100,15 +100,22 @@
       "medium": 2145,
       "hard": 989
     },
-    "acceptance": 57.14285714285714,
+    "acceptance": 57.692307692307686,
     "maxStreak": 2,
-    "activeDays": 7,
+    "activeDays": 8,
     "languages": [
       "C++",
       "JavaScript",
       "Python"
     ],
     "recent": [
+      {
+        "title": "Permutations",
+        "slug": "permutations",
+        "lang": "C++",
+        "date": "2026-11-09",
+        "solutionUrl": "https://github.com/faizanfareedkhan/leet_code/tree/main/0046-permutations"
+      },
       {
         "title": "Contains Duplicate",
         "slug": "contains-duplicate",
@@ -136,13 +143,6 @@
         "lang": "C++",
         "date": "2026-10-20",
         "solutionUrl": "https://github.com/faizanfareedkhan/leet_code/tree/main/0704-binary-search"
-      },
-      {
-        "title": "Subsets",
-        "slug": "subsets",
-        "lang": "C++",
-        "date": "2026-10-20",
-        "solutionUrl": "https://github.com/faizanfareedkhan/leet_code/tree/main/0078-subsets"
       }
     ],
     "stale": false
@@ -151,9 +151,9 @@
     "username": "faizanfareedkhan",
     "ranking": 5000001,
     "solved": {
-      "all": 11,
+      "all": 12,
       "easy": 9,
-      "medium": 2,
+      "medium": 3,
       "hard": 0
     },
     "totals": {
@@ -162,14 +162,14 @@
       "medium": 2145,
       "hard": 989
     },
-    "acceptedSubmissions": 44,
-    "totalSubmissions": 77,
+    "acceptedSubmissions": 45,
+    "totalSubmissions": 78,
     "maxStreak": 2,
-    "activeDays": 7,
+    "activeDays": 8,
     "languages": [
       {
         "name": "C++",
-        "solved": 5
+        "solved": 6
       },
       {
         "name": "JavaScript",
@@ -181,6 +181,12 @@
       }
     ],
     "recent": [
+      {
+        "title": "Permutations",
+        "slug": "permutations",
+        "timestamp": 1794202811,
+        "lang": "cpp"
+      },
       {
         "title": "Contains Duplicate",
         "slug": "contains-duplicate",
