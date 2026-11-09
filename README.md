@@ -42,7 +42,7 @@ Full Stack Developer with 3+ years of experience building production web applica
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/overview-dark.svg">
-    <img alt="GitHub: 1,270 contributions since 2022, 789 in 2026" src="assets/generated/overview-light.svg" width="49%">
+    <img alt="GitHub: 1,306 contributions since 2022, 825 in 2026" src="assets/generated/overview-light.svg" width="49%">
   </picture>
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/leetcode-dark.svg">
@@ -52,7 +52,7 @@ Full Stack Developer with 3+ years of experience building production web applica
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/generated/activity-dark.svg">
-    <img alt="2026 activity: 789 contributions, 2.5 per day on average" src="assets/generated/activity-light.svg" width="99%">
+    <img alt="2026 activity: 825 contributions, 2.6 per day on average" src="assets/generated/activity-light.svg" width="99%">
   </picture>
 </p>
 <p align="center">
@@ -70,6 +70,6 @@ Full Stack Developer with 3+ years of experience building production web applica
 - [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/) · C++ · 20 Oct 2026 · [solution](https://github.com/faizanfareedkhan/leet_code/tree/main/0509-fibonacci-number)
 - [Binary Search](https://leetcode.com/problems/binary-search/) · C++ · 20 Oct 2026 · [solution](https://github.com/faizanfareedkhan/leet_code/tree/main/0704-binary-search)
 
-<p align="center"><sub>Stats refresh automatically via GitHub Actions · updated 9 Nov 2026</sub></p>
+<p align="center"><sub>Stats refresh automatically via GitHub Actions · updated 10 Nov 2026</sub></p>
 
 <img src="assets/footer.svg" width="100%" alt="">
